@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+body, h1, h2, h3, ul, li, p, address, small { margin: 0; padding: 0; }
+ul li { list-style: none; }
+a { text-decoration: none; }
+address { font-style: normal; }
+small { font-size: 1em; }
+.hidden { position: absolute; left: -9999px; }
+body {
+  background: linear-gradient(180deg, #3cc4ff 0%, #fff 100%) no-repeat;}
+#wrap { background: #fff; margin: 8px auto 0; width: 960px; border: 1px solid #e7e7e7; }
+/* 헤더 */
+#header { height: 279px; background: url(../images/bg_header.png) no-repeat;
+    }
+#header h1 {
+  padding: 20px 0 0 20px; color: #ff0; font-size: 70px; }
+/* 네비 */
+#gnb { height: 60px; }
+#gnb ul { }
+#gnb ul li { float: left; width: 25%; height: 60px;
+           }
+#gnb ul li a { display: block; color: #fff; height: 60px; text-align: center; line-height: 60px;
+                background: #006600; }
+#gnb ul li a:hover { background: #fff; color: #000; }
+/* 메인 */
+
+main { width: 740px; float: left; }
+#content { padding: 30px 20px;
+  /* box-sizing: border-box;  */
+}
+#content h2 { }
+#content h3 { margin: 20px 0; }
+#content p { margin-bottom: 10px; font-size: 14px; }
+/* 사진 */
+#slidebar { width: 220px; float: left; background: #beffa7;
+   text-align: center; padding: 20px 0;
+   /* box-sizing: border-box;  */
+ }
+#slidebar img { border: 1px solid #ccc; }
+
+/* 푸터 */
+#footer { background: #061f1f; color: #fff; clear:both;
+        text-align: center; padding: 20px 0; }
+/* all: 모든 미디어 타입
+print: 인쇄 용도
+screen: 컴퓨터 스크린
+tv: 음성과 영상이 동시 출력 되는 장치
+등.. */
+/* 600-1023 */
+@media all and ( max-width: 1023px ) {
+ #wrap { width: 580px; }
+ main { width: auto; float: none; padding: 0 30px; }
+ #slidebar { width: auto; float: none; }
+}
+ #slidebar img { width: 176px; }
+/* 599이하 */
+@media all and ( max-width: 599px ) {
+  body { background: none; }
+  #wrap { width: 100%; margin: 0; border: 0; }
+  #header { height: 75px; background: #061f1f; width: auto;}
+  #header h1 { padding: 10px 0 0 10px; font-size: 30px; }
+  #gnb { height: auto; padding: 14px 20px 0; }
+  #gnb ul li { float: none;  width: auto; margin-bottom: 10px; }
+  #gnb ul li a { border: 1px solid #ccc; border-radius: 10px;
+                background: #fff; color: #000;}
+ #slidebar img { width: 90%; }
+}
